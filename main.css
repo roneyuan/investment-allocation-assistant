@@ -1,5 +1,9 @@
+* {
+	box-sizing: border-box;
+}
+
 header {
-	position: fixed;
+	/*position: fixed;*/
 	right: 0;
 	top: 0;
 	left: 0;
@@ -8,12 +12,16 @@ header {
 }
 
 footer {
-	position: absolute;
+	/*position: absolute;*/
 	right: 0;
 	bottom: 0;
 	left: 0;
 	text-align: center;
 	background-color:gray;
+}
+
+button {
+	margin-top: 5%;
 }
 
 .content {
@@ -24,7 +32,26 @@ footer {
 	text-align: center;
 }
 
-.chart {
-	position: absolute;
-	bottom: 0;
+.frame {
+	text-align: center;
+	width: 280px;
+	margin:auto;
+}
+
+.choice {
+	margin-top: 2%;
+	text-align: left; 
+}
+
+
+.allocation {
+	margin: 2% auto;
+	text-align: center;
+	background-color: gray;
+	width: 500px;
+	height: 300px;
+}
+
+.stock, .bond {
+	list-style-type: none;
 }
