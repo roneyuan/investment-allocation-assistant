@@ -1,40 +1,49 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<title>App</title>
+		<title>Financial Question App</title>
 		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link href="grid.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<header>APP</header>
+		<header>Financial Allocation Recommendation App</header>
 		<main>
-			<div class="content">
-				<div class="first-page">
-					<div class="intro">This is a quiz to give you the suggestion for your investment.</div>
-					<button class="begin">Go</button>
-				</div>		
-			</div>
-			<div class="allocation">
-				<ul>
-					<li class="stock">Stock: 50%</li>
-					<li class="bond">Bond: 50%</li>
-				</ul>
-				<div class="chart">
-				    <svg width="250" height="250">
-				      <path d="M0 50 L100 50Z"
-				            fill="none" stroke="green" stroke-width="30"></path>
-				      <path d="M100 50 L200 50Z"
-				            fill="none" stroke="orange" stroke-width="30"></path>
-				    </svg>				
+			<div class="row">
+				<div class="col-6">
+					<div class="content">
+						<div class="first-page">
+							<div class="intro">This is a quiz to give you the suggestion for your investment.</div>
+							<button class="begin">Go</button>
+						</div>		
+					</div>
 				</div>
-<!-- 				<div class="chart">
-					<svg width="500" height="300">
-						<g transform="translate(250,100)" stroke="#000" stroke-width="2">					
-							<path d="M0 0 0 50 A49 49 0 0 1 0 -50Z" fill="#f00"/>
-							<path d="M0 0 0 -50 A49 49 0 0 1 0 50Z" fill="#080"/>
-						</g>	
-					</svg>
-				</div>	 -->					
+
+				<div class="col-6">
+					<div class="allocation">
+						<ul>
+							<li class="stock">Stock: 50%</li>
+							<li class="bond">Bond: 50%</li>
+						</ul>
+						<div class="chart">
+						    <svg width="250" height="250">
+						      <path d="M0 50 L100 50Z"
+						            fill="none" stroke="green" stroke-width="30"></path>
+						      <path d="M100 50 L200 50Z"
+						            fill="none" stroke="orange" stroke-width="30"></path>
+						    </svg>				
+						</div>
+		<!-- 				<div class="chart">
+							<svg width="500" height="300">
+								<g transform="translate(250,100)" stroke="#000" stroke-width="2">					
+									<path d="M0 0 0 50 A49 49 0 0 1 0 -50Z" fill="#f00"/>
+									<path d="M0 0 0 -50 A49 49 0 0 1 0 50Z" fill="#080"/>
+								</g>	
+							</svg>
+						</div>	 -->					
+					</div>
+				</div>
 			</div>
+
 		</main>
 		<footer>All right reserve. And References</footer>
 		<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
