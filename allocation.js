@@ -1,15 +1,9 @@
 
 function changeChart(thisQuestion, thisAnswer) {
-	// TODO
-	
-	var defaultStockAllocation = state['stock'];
-
 	var score = getScore(thisQuestion, thisAnswer);
-	defaultStockAllocation += score;
-	var bond = 100 - defaultStockAllocation;
-	
-	state['stock'] = defaultStockAllocation;
-	state['bond'] = bond;
+
+	state['stock'] += score;
+	state['bond'] = 100 - state['stock'];
 	
 	return;
 }
