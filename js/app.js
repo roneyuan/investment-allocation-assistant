@@ -43,12 +43,17 @@ function generateQuestion(number) {
 function goToNextQuestion(number) {
 	// Go to next question and delete the previous one
 	
-	// Remove previous
-	$(".frame").remove();
+
 	
 	if (number === question.length) {
+		// Remove Queston and Answer
+		$('.question').remove();
+		$('.choice').remove();
+		
 		presentResult();
 	} else {
+		// Remove previous
+		$(".frame").remove();		
 		startQuestion(number);	
 	}
 }
@@ -84,8 +89,17 @@ function presentResult() {
 		result += "<div>"+element['id']+": "+element['answer']+"</div>";
 	});
 
-	$('.content').append(result);
+	$('.frame').append(result);
+	$('.frame').append("<button class='restart'> Restart </button>");
 	presentFinalChart();
+	$('.restart').on('click', function (event) {
+		event.preventDefault();
+		// Reset
+		state['stock'] = 50;
+		state['bond'] = 50;
+		updateAllocation();
+		goToNextQuestion(0);
+	})
 }
 
 function updateAllocation() {
