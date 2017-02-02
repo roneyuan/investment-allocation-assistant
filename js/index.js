@@ -46,8 +46,8 @@ var question = [
 	},
 	{
 		id: 10,
-		question: 'TBD',
-		choice: ["1. ","2. ","3. ","4. "]
+		question: 'Which Stock would you invest now?',
+		choice: ["AAPL","TSLA ","KO","UAA"]
 	}	
 ];
 
