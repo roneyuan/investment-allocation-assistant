@@ -15,15 +15,15 @@ function startQuestion(number) {
 						+ question[number]['question'] + "</div> \
 						<form class='choice'>" 
 						+ getChoices + "\
-						<button class='submit'>Submit</button> \
 						</form> \
 					</div>";
 				
 	$('.content').append(template);	
 	
-	$(".submit").on('click', function(event) {
+	$(".submitAnswer").on('click', function(event) {
 		event.preventDefault();
-		getInputAnswer(number);
+		var ans = $(this).attr('value');
+		getInputAnswer(number, ans);
 	});		
 }
 
@@ -31,10 +31,10 @@ function generateQuestion(number) {
 	var choices = "";
 	var currentObj = question[number];
 	
-	for (var n=0; n < 4; n++) {
-		choices += "<input type='radio' name='" + currentObj['id'] + 
-					"' value='" + n + "' /> " +
-					currentObj['choice'][n] + " <br>";
+	for (var n=0; n < 4; n++) { //<a href="#" class="myButton">light grey</a>
+		choices += "<button class='submitAnswer' name='" + currentObj['id'] + 
+					"' value='" + n + "'> " +
+					currentObj['choice'][n] + " </button>";
 	}
 
 	return choices;
@@ -58,17 +58,13 @@ function goToNextQuestion(number) {
 	}
 }
 
-function getInputAnswer(number) {
-	// Get the user's choice
-	var inputName = "input[name=" + question[number]['id'] + "]:checked"
-	var thisAnswer = $(inputName, '.choice').val();
-	
-	if (thisAnswer === undefined) {
+function getInputAnswer(number, answer) {
+	if (answer === undefined) {
 		alert("Please select");
 		return;
 	} else {
-		saveAnswer(number, thisAnswer);
-		changeChart(number, thisAnswer);
+		saveAnswer(number, answer);
+		changeChart(number, answer);
 		updateAllocation();
 		var next = number + 1;
 		goToNextQuestion(next);	
