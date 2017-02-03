@@ -94,7 +94,7 @@ var answer = [
 	}	
 ];
 
-var state = {
-	stock: 50,
-	bond: 50
-}
+var state = [
+	{type: "stock", value: 50},
+	{type: "bond", value: 50}
+];

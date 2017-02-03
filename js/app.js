@@ -91,8 +91,8 @@ function presentResult() {
 	$('.restart').on('click', function (event) {
 		event.preventDefault();
 		// Reset
-		state['stock'] = 50;
-		state['bond'] = 50;
+		state[0].value = 50;
+		state[1].value = 50;
 		updateAllocation();
 		goToNextQuestion(0);
 	})

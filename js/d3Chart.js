@@ -41,31 +41,30 @@ function updateCurrentChart() {
 		bar.enter()
 		.append("rect")
 		.attr("width", function(d) { 
-			return (xScale(d))
+			return (xScale(d.value))
 			//return (d == state["stock"]) ? xScale(d["stock"]) : xScale(d["bond"]) // If key == stock return stock scale else bond scale
 			})
 		.attr("height", 50)
 		.attr("x", function(d) { 
-			//return 0
-			return (d == state["stock"]) ? 0 : xScale(state["stock"]) // If key == stock start from 0 else start from stock's scale
+			return (d.type == "stock") ? 0 : xScale(100-d.value) // If key == stock start from 0 else start from stock's scale
 			})
 		.attr("fill", function(d) {
 			//return "green"
-			return (d == state["stock"]) ? "#FF8983" : "#C6FBFF"
+			return (d.type == "stock") ? "#FF8983" : "#C6FBFF"
 			}); // different color
 			
 		bar.enter()			// Need to use enter() in order to pass the data to text
 		.append("text")	
-		.attr("x", function(d) {return (d == state["stock"]) ? xScale(d)/2 : xScale(state['stock']) + (xScale(state["bond"])/2) })
+		.attr("x", function(d) {return (d.type == "stock") ? xScale(d.value)/2 : xScale(100-d.value) + (xScale(d.value)/2) })
 		.attr("y", "30")
 		.attr("text-anchor", "middle")
-		.text(function(d){return (d == state["stock"]) ? "Stock: " + d +"%" : "Bond: " + d + "%" });
+		.text(function(d){return (d.type == "stock") ? "Stock: " + d.value +"%" : "Bond: " + d.value + "%" });
     
       	bar.exit().remove();
     }
 
 
-	render([state["stock"], state["bond"]]);
+	render(state);
 
 	return;
 }

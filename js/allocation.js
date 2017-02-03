@@ -2,8 +2,8 @@
 function changeChart(thisQuestion, thisAnswer) {
 	var score = getScore(thisQuestion, thisAnswer);
 
-	state['stock'] += score;
-	state['bond'] = 100 - state['stock'];
+	state[0].value += score;
+	state[1].value = 100 - state[0].value;
 	
 	return;
 }
