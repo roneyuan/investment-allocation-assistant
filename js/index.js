@@ -21,7 +21,7 @@ var question = [
 	},
 	{
 		id: 5,
-		question: 'What is yuor investment style?',
+		question: 'What is your investment style?',
 		choice: ["Aggressive Growth","Steady Growth ","Moderate Growth","Loss Avoidance"]
 	},
 	{
