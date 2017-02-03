@@ -15,7 +15,7 @@ function updateCurrentChart() {
     var outerWidth = 360;
     var outerHeight = 250;
     
-    var margin =  { left: 10, top: 10, right: 10, bottom: 10 }; // Setup later
+    var margin =  { left: 10, top: 10, right: 10, bottom: 10 }; 
     
     var innerWidth = outerWidth - margin.left - margin.right; 
     var innerHeight = outerHeight - margin.top - margin.bottom;
@@ -42,14 +42,12 @@ function updateCurrentChart() {
 		.append("rect")
 		.attr("width", function(d) { 
 			return (xScale(d.value))
-			//return (d == state["stock"]) ? xScale(d["stock"]) : xScale(d["bond"]) // If key == stock return stock scale else bond scale
 			})
 		.attr("height", 50)
 		.attr("x", function(d) { 
 			return (d.type == "stock") ? 0 : xScale(100-d.value) // If key == stock start from 0 else start from stock's scale
 			})
 		.attr("fill", function(d) {
-			//return "green"
 			return (d.type == "stock") ? "#FF8983" : "#C6FBFF"
 			}); // different color
 			

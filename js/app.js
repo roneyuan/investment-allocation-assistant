@@ -31,7 +31,7 @@ function generateQuestion(number) {
 	var choices = "";
 	var currentObj = question[number];
 	
-	for (var n=0; n < 4; n++) { //<a href="#" class="myButton">light grey</a>
+	for (var n=0; n < 4; n++) { 
 		choices += "<button class='submitAnswer' name='" + currentObj['id'] + 
 					"' value='" + n + "'> " +
 					currentObj['choice'][n] + " </button>";
@@ -42,8 +42,6 @@ function generateQuestion(number) {
 
 function goToNextQuestion(number) {
 	// Go to next question and delete the previous one
-	
-
 	
 	if (number === question.length) {
 		// Remove Queston and Answer
@@ -99,10 +97,6 @@ function presentResult() {
 }
 
 function updateAllocation() {
-	//var thisStock = "Stock: " + state["stock"] + "%";
-	//var thisBond = "Bond: " + state["bond"] + "%";
-	//$(".stock").text(thisStock);
-	//$(".bond").text(thisBond);
 	updateCurrentChart();
 
 	return;
