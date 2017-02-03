@@ -82,7 +82,7 @@ function presentResult() {
 	var result = "";
 	
 	answer.forEach(function(element) {
-		result += "<div>"+element['id']+": "+element['answer']+"</div>";
+		result += "<div>"+element['id']+": "+question[element['id']-1]["choice"][element['answer']]+"</div>";
 	});
 
 	$('.frame').append(result);
@@ -99,10 +99,10 @@ function presentResult() {
 }
 
 function updateAllocation() {
-	var thisStock = "Stock: " + state["stock"] + "%";
-	var thisBond = "Bond: " + state["bond"] + "%";
-	$(".stock").text(thisStock);
-	$(".bond").text(thisBond);
+	//var thisStock = "Stock: " + state["stock"] + "%";
+	//var thisBond = "Bond: " + state["bond"] + "%";
+	//$(".stock").text(thisStock);
+	//$(".bond").text(thisBond);
 	updateCurrentChart();
 
 	return;

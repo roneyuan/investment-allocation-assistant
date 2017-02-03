@@ -23,6 +23,7 @@ text {
 	font-size: 120%;
 	color: white;
 }
+
 .body {		
 	font-family: 'Cardo', serif;
 }
@@ -41,6 +42,10 @@ text {
 	background-color: #15B4FF;
 }
 
+.allocation {
+	padding-top: 2%;
+}
+
 .frame {
 	text-align: center;
 	margin: auto;
@@ -54,7 +59,7 @@ text {
 	list-style-type: none;
 }
 
-.begin {
+.begin, .restart {
 	width: 80px;
 	height: 50px;
 	border-radius:10px;
@@ -64,6 +69,9 @@ text {
 	cursor: pointer;
 }
 
+.restart {
+	width: 120px;
+}
 .submitAnswer {
 	background-color:white;
 	border-radius:10px;
