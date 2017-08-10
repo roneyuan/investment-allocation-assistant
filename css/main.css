@@ -7,12 +7,14 @@ header {
 	top: 0;
 	left: 0;
 	text-align: center;
-	background-color:#A7D2FF;
+	background-color: rgba(93, 132,173, 0.7);
 	font-size: 1.8em;
 	height: 100px;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	font-family: 'Montserrat', sans-serif;
+	border-radius: 5px;
+	color: white;
 }
 
 button {
@@ -24,7 +26,10 @@ text {
 	color: white;
 }
 
-.body {		
+body {
+	background-image: url('../img/bg.jpeg');
+	/*background-repeat: none;*/
+	background-size: cover;	
 	font-family: 'Cardo', serif;
 }
 
@@ -39,7 +44,9 @@ text {
 	margin: 5% auto;
 	text-align: center;
 	height: 500px;
-	background-color: #15B4FF;
+	background-color: rgba(105, 138, 154, 0.7);
+	border-radius: 5px;
+	color: white;
 }
 
 .allocation {
