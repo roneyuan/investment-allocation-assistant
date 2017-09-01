@@ -1,6 +1,6 @@
 # Investment Allocation Assistant
 
-A financial quiz app to determine your investment allocation for stock and bond.
+A financial app to determine your investment allocation for stock and bond.
 
 
 # Demo
