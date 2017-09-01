@@ -5,7 +5,7 @@ A financial app to determine your investment allocation for stock and bond.
 
 # Demo
 
-Please check the demo here: https://roneyuan.github.io/quiz-app/
+Please check the demo here: https://roneyuan.github.io/investment-allocation-assistant
 
 
 # Background
